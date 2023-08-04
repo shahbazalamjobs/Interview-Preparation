@@ -1218,10 +1218,10 @@ Certainly, here are simple explanations, along with code examples, for each of y
 
 ### Function Basics:
 
-**1 What is a function in JavaScript?**
+**1. What is a function in JavaScript?**
 A function in JavaScript is a reusable block of code that performs a specific task or set of tasks. It allows you to encapsulate logic, making your code more organized, modular, and easier to maintain.
 
-**2 How do you declare a function? Provide examples of different ways.**
+**2. How do you declare a function? Provide examples of different ways.**
 
 1. **Function Declaration (Named):**
    ```javascript
@@ -1244,15 +1244,15 @@ A function in JavaScript is a reusable block of code that performs a specific ta
    };
    ```
 
-**3 Explain the difference between function declarations and function expressions.**
+**3. Explain the difference between function declarations and function expressions.**
 Function declarations are hoisted, meaning they can be called before their declaration in the code. Function expressions are not hoisted and must be defined before they are used.
 
-**4 What is the purpose of the return statement in a function?**
+**4. What is the purpose of the return statement in a function?**
 The `return` statement is used to specify the value that a function should return when it is invoked. It allows the function to produce a result that can be used elsewhere in the code.
 
-**Function Parameters and Arguments:**
+### Function Parameters and Arguments:
 
-**1 How do you pass parameters to a function?**
+**1. How do you pass parameters to a function?**
 Parameters are defined in the function declaration, and arguments are the actual values passed when invoking the function.
 
 ```javascript
@@ -1263,7 +1263,7 @@ function add(a, b) {
 const result = add(3, 5); // Passes 3 and 5 as arguments
 ```
 
-**2 What are default parameters in a function?**
+**2. What are default parameters in a function?**
 Default parameters allow you to provide default values for parameters if no arguments are passed during function invocation.
 
 ```javascript
@@ -1275,7 +1275,7 @@ greet(); // Uses default parameter "Guest"
 greet("Alice"); // Uses provided argument "Alice"
 ```
 
-**3 Explain the concept of rest parameters and provide an example.**
+**3. Explain the concept of rest parameters and provide an example.**
 Rest parameters allow you to pass a variable number of arguments to a function as an array.
 
 ```javascript
@@ -1288,10 +1288,10 @@ const total = sum(2, 4, 6, 8); // Passes multiple arguments as an array
 
 ### Function Scope
 
-**1 Describe the difference between global scope and local scope.**
+**1. Describe the difference between global scope and local scope.**
 Global scope refers to variables declared outside any function, making them accessible throughout the entire code. Local scope refers to variables declared within a function, making them only accessible within that function.
 
-**2 What is variable shadowing, and how does it occur?**
+**2. hat is variable shadowing, and how does it occur?**
 Variable shadowing occurs when a variable declared within a local scope has the same name as a variable in an outer scope. The inner variable "shadows" the outer variable, making it inaccessible within the inner scope.
 
 **3 How can you access a variable from an outer (enclosing) function in an inner (nested) function?**
