@@ -1431,7 +1431,83 @@ Certainly! Here are detailed answers, along with code examples, for each of the 
 27. **Explain the concept of a base case in recursive functions.**
     - A base case is a condition that terminates the recursive process. Without it, the function would infinitely call itself.
 
+Sure! Here are detailed explanations with code examples for the Module Pattern and Async Functions:
 
+**Module Pattern:**
+
+1. **Describe the module pattern in JavaScript:**
+   - The module pattern is a design pattern in JavaScript that provides a way to encapsulate and organize code by creating self-contained modules. It uses closures to create private and public members, allowing for better code organization and avoiding global namespace pollution.
+
+2. **How does the module pattern help with encapsulation and avoiding global namespace pollution?**
+   - Encapsulation: The module pattern creates private members (variables and functions) that are not accessible from the outside, ensuring data privacy and preventing unintended modifications.
+   - Namespace Pollution: By encapsulating functionality within modules, the module pattern avoids polluting the global namespace, reducing the risk of naming conflicts.
+
+**Example of Module Pattern:**
+
+```javascript
+const CounterModule = (function() {
+    let count = 0; // Private variable
+    
+    function increment() {
+        count++;
+    }
+    
+    function getCount() {
+        return count;
+    }
+    
+    return {
+        increment: increment, // Public method
+        getCount: getCount    // Public method
+    };
+})();
+
+console.log(CounterModule.getCount()); // Output: 0
+CounterModule.increment();
+console.log(CounterModule.getCount()); // Output: 1
+```
+
+### Async Functions:
+
+1. **What are async functions?**
+   - Async functions are a feature introduced in ECMAScript 2017 (ES8) that make working with asynchronous operations, such as Promises, easier and more readable. They allow you to write asynchronous code in a synchronous-like manner.
+
+2. **How do they relate to promises and async/await?**
+   - Async functions use the `async` keyword before the function declaration and implicitly return a Promise. They can contain the `await` keyword, which pauses the execution of the function until the Promise is resolved, making the code appear more linear and readable.
+
+**Example of Async Function:**
+
+```javascript
+function fetchUser(id) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const users = [
+                { id: 1, name: "Alice" },
+                { id: 2, name: "Bob" }
+            ];
+            const user = users.find(user => user.id === id);
+            if (user) {
+                resolve(user);
+            } else {
+                reject("User not found");
+            }
+        }, 1000);
+    });
+}
+
+async function getUserInfo(id) {
+    try {
+        const user = await fetchUser(id);
+        console.log(`User ID: ${user.id}, Name: ${user.name}`);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getUserInfo(1);
+```
+
+In the example above, the `getUserInfo` function is an async function that awaits the `fetchUser` Promise. This makes the asynchronous code read like synchronous code, improving code readability and maintainability.
 
 ---
 
