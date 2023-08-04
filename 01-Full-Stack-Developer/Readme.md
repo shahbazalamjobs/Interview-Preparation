@@ -1313,7 +1313,7 @@ innerFunction(); // Logs "I'm from outer!"
 ```
 
 
-**Closures:**
+### Closures:
 
 1. **Define a closure and explain its practical use:**
    - A closure is a function that "closes over" its own scope as well as the scope of its outer function and even the global scope. It retains access to variables from these scopes even after the outer function has finished executing.
@@ -1336,7 +1336,7 @@ innerFunction(); // Logs "I'm from outer!"
    console.log(counter()); // Output: 2
    ```
    
-**Higher-Order Functions:**
+### Higher-Order Functions:
 
 4. **What is a higher-order function? Provide an example:**
    - A higher-order function is a function that either accepts one or more functions as arguments or returns a function as its result.
@@ -1377,7 +1377,7 @@ innerFunction(); // Logs "I'm from outer!"
    const sum = numbers.reduce((acc, num) => acc + num, 0); // 15
    ```
 
-**Callback Functions:**
+### Callback Functions:
 
 7. **What is a callback function? How is it used in JavaScript?**
    - A callback function is a function passed as an argument to another function, which is then invoked or executed later, often asynchronously, in response to some event or condition.
@@ -1400,6 +1400,132 @@ innerFunction(); // Logs "I'm from outer!"
    });
    ```
 
+
+### Function Basics:
+
+1. **What is a function in JavaScript?**
+   - A function in JavaScript is a reusable block of code that performs a specific task. It can accept inputs (parameters), execute statements, and return a value.
+
+2. **How do you declare a function? Provide examples of different ways.**
+   - Function Declaration:
+   ```javascript
+   function greet(name) {
+       return `Hello, ${name}!`;
+   }
+   ```
+
+   - Function Expression:
+   ```javascript
+   const greet = function(name) {
+       return `Hello, ${name}!`;
+   };
+   ```
+
+   - Arrow Function (ES6):
+   ```javascript
+   const greet = name => `Hello, ${name}!`;
+   ```
+
+3. **Explain the difference between function declarations and function expressions.**
+   - Function Declaration is hoisted and can be used before its declaration in the code.
+   - Function Expression is not hoisted and must be defined before it is used.
+
+4. **What is the purpose of the return statement in a function?**
+   - The `return` statement specifies the value that the function should return when called. It also exits the function execution.
+
+### Function Parameters and Arguments:
+
+5. **How do you pass parameters to a function?**
+   - Parameters are declared in the function's parentheses and are used to accept values when the function is called.
+   ```javascript
+   function greet(name) {
+       return `Hello, ${name}!`;
+   }
+   ```
+
+6. **What are default parameters in a function?**
+   - Default parameters provide values to function parameters if no value or `undefined` is provided during the function call.
+   ```javascript
+   function greet(name = "Guest") {
+       return `Hello, ${name}!`;
+   }
+   ```
+
+7. **Explain the concept of rest parameters and provide an example.**
+   - Rest parameters allow a function to accept an arbitrary number of arguments as an array.
+   ```javascript
+   function sum(...numbers) {
+       return numbers.reduce((total, num) => total + num, 0);
+   }
+   ```
+
+### Function Scope:
+
+8. **Describe the difference between global scope and local scope.**
+   - Global scope refers to variables accessible throughout the entire program.
+   - Local scope (function scope) refers to variables accessible only within the function where they are declared.
+
+9. **What is variable shadowing, and how does it occur?**
+   - Variable shadowing occurs when a variable declared in a local scope has the same name as a variable in an outer scope, causing the inner variable to "shadow" the outer one.
+
+10. **How can you access a variable from an outer (enclosing) function in an inner (nested) function?**
+    - Inner functions have access to variables in their outer functions due to closure.
+    ```javascript
+    function outer() {
+        const outerVar = "Outer";
+        function inner() {
+            console.log(outerVar); // Access outerVar from outer function
+        }
+        inner();
+    }
+    ```
+
+### Closures:
+
+11. **Define a closure and explain its practical use.**
+    - A closure is a function that retains access to its outer function's variables even after the outer function has finished executing.
+    - Practical use: Creating private variables, maintaining state, and implementing data encapsulation.
+
+12. **How does a closure retain access to its outer function's variables even after the outer function has finished executing?**
+    - Closures retain access to outer function variables through lexical scoping, capturing references to those variables even after the outer function has completed.
+
+13. **Provide an example of a closure being used to create private variables.**
+    
+    ```javascript
+    function createCounter() {
+        let count = 0;
+        return function() {
+            return ++count;
+        };
+    }
+    const counter = createCounter();
+    console.log(counter()); // Output: 1
+    ```
+
+### Higher-Order Functions:
+
+14. **What is a higher-order function? Provide an example.**
+    - A higher-order function is a function that either accepts other functions as arguments or returns a function.
+    ```javascript
+    function higherOrder(func) {
+        return func();
+    }
+    ```
+
+15. **Explain how you can pass functions as arguments to other functions.**
+    - Functions can be passed as arguments just like any other value.
+    ```javascript
+    function greet(name) {
+        return `Hello, ${name}!`;
+    }
+    function processGreeting(func, name) {
+        return func(name);
+    }
+    ```
+
+16. **Describe the map, filter, and reduce functions and provide use cases.**
+    - `map`: Transforms each element of an array and returns a new array with transformed values.
+    - `filter`: Creates
 
 
 ---
