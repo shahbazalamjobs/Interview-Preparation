@@ -571,7 +571,7 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
    - An **object** is a data structure that stores data as key-value pairs. It is used to represent real-world entities and their attributes.
    - An **array** is a linear data structure that stores a collection of elements in a specific order. It is used to store and manipulate lists of data.
 
- **Example:**
+   **Example:**
    ```javascript
    // Object
    const person = {
@@ -585,14 +585,14 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
    ```
 2. **Creating and Accessing Properties of an Object in JavaScript:**
 
- **Creating Properties:**
+   **Creating Properties:**
    ```javascript
    const person = {};
    person.name = "Alice";
    person.age = 25;
    ```
 
- **Accessing Properties:**
+   **Accessing Properties:**
    ```javascript
    console.log(person.name);  // Output: "Alice"
    console.log(person["age"]); // Output: 25
