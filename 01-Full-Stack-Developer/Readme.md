@@ -5,7 +5,7 @@
 HTML Questions:
 
 1. **What is HTML and what does it stand for?**
-   - HTML stands for HyperText Markup Language. It is the standard markup language used to create and structure content on the web.
+ - HTML stands for HyperText Markup Language. It is the standard markup language used to create and structure content on the web.
 
 2. **What is the purpose of the `<!DOCTYPE>` declaration in HTML?**
   - The `<!DOCTYPE>` declaration specifies the document type and version of HTML being used in a web page. It helps browsers render the content correctly.
