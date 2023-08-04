@@ -1217,7 +1217,6 @@ Certainly, here are simple explanations, along with code examples, for each of y
 
 ---
 
-Of course! Here's the detailed explanation with numbering for each question:
 
 ** Function Basics:**
 
