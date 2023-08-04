@@ -161,44 +161,103 @@ Example:
 
 CSS Questions:
 
-1. **What is CSS and what does it stand for?**
- -  CSS stands for Cascading Style Sheets. It is a stylesheet language used to describe the presentation and layout of HTML documents.
+Certainly! Here are the detailed yet simple answers with code examples for the questions you provided:
 
-2. **Describe the difference between inline, internal, and external CSS.**
-   - Inline CSS: Styles applied directly within HTML elements using the `style` attribute.
-   - Internal CSS: Styles defined within the `<style>` element in the `<head>` section of an HTML document.
-   - External CSS: Styles defined in a separate .css file and linked to the HTML document using the `<link>` element.
+**1. What is CSS and what does it stand for?**
 
-3. **How do you select elements in CSS? Provide examples of different selectors.**
-   CSS selectors are used to target specific elements. Examples:
-   - Element selector: `p { color: blue; }`
-   - Class selector: `.my-class { font-weight: bold; }`
-   - ID selector: `#my-id { text-decoration: underline; }`
+CSS stands for Cascading Style Sheets. It is a stylesheet language used to describe the presentation and layout of HTML documents.
 
-4. **Explain the box model in CSS.**
-  - The box model represents how elements are rendered in a box, including content, padding, border, and margin.
+**2. Describe the difference between inline, internal, and external CSS.**
 
-5. **What is the purpose of the `float` property in CSS?**
-  - The `float` property is used to position an element to the left or right of its containing element, allowing text and other elements to wrap around it.
+- Inline CSS: Styles applied directly within HTML elements using the `style` attribute.
+```html
+<p style="color: blue;">This is a blue paragraph.</p>
+```
 
-6. **How can you center an element horizontally and vertically using CSS?**
- -  Horizontally: `margin: 0 auto;` for block-level elements.
-  - Vertically (with limitations): Using flexbox or CSS Grid.
+- Internal CSS: Styles defined within the `<style>` element in the `<head>` section of an HTML document.
+```html
+<head>
+    <style>
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+```
 
-7. **What is a CSS selector specificity? How is it calculated?**
- -  Specificity determines which CSS rule takes precedence when conflicting rules target the same element. It is calculated based on selectors' components: inline styles, IDs, classes, and elements.
+- External CSS: Styles defined in a separate `.css` file and linked to the HTML document using the `<link>` element.
+```html
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+```
 
-8. **How can you include comments in CSS?**
- -  CSS comments are written with `/* Your comment here */`.
+**3. How do you select elements in CSS? Provide examples of different selectors.**
 
-9. **Explain the concept of CSS inheritance.**
- -  Inheritance allows child elements to inherit certain properties (such as font or color) from their parent elements.
+CSS selectors are used to target specific elements. Examples:
 
-10. **What is a pseudo-class in CSS? Provide examples.**
-    A pseudo-class is used to define a special state of an element. Examples:
-   - `:hover`: Styles applied when hovering over an element.
-   - `:nth-child(n)`: Styles applied to specific instances of an element.
-   - `:first-child`: Styles applied to the first child of its parent.
+- Element selector:
+```css
+p {
+    color: blue;
+}
+```
+
+- Class selector:
+```css
+.my-class {
+    font-weight: bold;
+}
+```
+
+- ID selector:
+```css
+#my-id {
+    text-decoration: underline;
+}
+```
+
+**4. Explain the box model in CSS.**
+
+The box model represents how elements are rendered in a box, including content, padding, border, and margin.
+
+**5. What is the purpose of the float property in CSS?**
+
+The float property is used to position an element to the left or right of its containing element, allowing text and other elements to wrap around it.
+
+**6. How can you center an element horizontally and vertically using CSS?**
+
+- Horizontally: `margin: 0 auto;` for block-level elements.
+```css
+.center {
+    margin: 0 auto;
+}
+```
+
+- Vertically (with limitations): Using flexbox or CSS Grid.
+
+**7. What is a CSS selector specificity? How is it calculated?**
+
+Specificity determines which CSS rule takes precedence when conflicting rules target the same element. It is calculated based on selectors' components: inline styles, IDs, classes, and elements.
+
+**8. How can you include comments in CSS?**
+
+CSS comments are written with `/* Your comment here */`.
+```css
+/* This is a CSS comment */
+```
+
+**9. Explain the concept of CSS inheritance.**
+
+Inheritance allows child elements to inherit certain properties (such as font or color) from their parent elements.
+
+**10. What is a pseudo-class in CSS? Provide examples.**
+
+A pseudo-class is used to define a special state of an element. Examples:
+
+- `:hover`: Styles applied when hovering over an element.
+- `:nth-child(n)`: Styles applied to specific instances of an element.
+- `:first-child`: Styles applied to the first child of its parent.
 
 11. **How can you apply CSS styles to only the first child of an element?**
   -  Using the `:first-child` pseudo-class. Example: `ul li:first-child { font-weight: bold; }`
