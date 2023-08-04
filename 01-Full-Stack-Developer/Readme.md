@@ -1511,7 +1511,222 @@ In the example above, the `getUserInfo` function is an async function that await
 
 ---
 
+### Async Basics:
 
+1. **What is asynchronous programming, and why is it important in JavaScript?**
+   - Asynchronous programming is a way to execute tasks concurrently without blocking the main program's execution. It's important in JavaScript to handle tasks like network requests, file operations, and timers without freezing the user interface.
+
+2. **How does asynchronous programming differ from synchronous programming?**
+   - In synchronous programming, tasks are executed sequentially, one after the other, blocking the execution until a task is completed. In asynchronous programming, tasks are executed independently, allowing other tasks to proceed without waiting.
+
+3. **Explain the event loop and its role in handling asynchronous operations.**
+   - The event loop is a mechanism that handles asynchronous operations in JavaScript. It continuously checks the message queue for pending tasks and executes them when the call stack is empty, ensuring non-blocking behavior.
+
+### Callbacks:
+
+4. **What is a callback function? Provide an example of using a callback for asynchronous operations.**
+   - A callback function is a function passed as an argument to another function and is executed later, usually after an asynchronous operation completes.
+   
+   ```javascript
+   function fetchData(url, callback) {
+       setTimeout(() => {
+           const data = "Data from " + url;
+           callback(data);
+       }, 1000);
+   }
+   
+   fetchData("https://example.com", (data) => {
+       console.log(data); // Output: "Data from https://example.com"
+   });
+   ```
+
+5. **Describe callback hell and how you can mitigate it.**
+   - Callback hell (also known as the pyramid of doom) occurs when multiple nested callbacks make code hard to read. It can be mitigated by modularization, using named functions, or adopting Promises or async/await.
+
+6. **How do you handle errors when using callback-based asynchronous code?**
+   - Errors can be handled by passing an additional callback parameter to indicate error conditions.
+   
+   ```javascript
+   function fetchData(url, onSuccess, onError) {
+       setTimeout(() => {
+           const error = false; // Simulate an error
+           if (error) {
+               onError("An error occurred");
+           } else {
+               const data = "Data from " + url;
+               onSuccess(data);
+           }
+       }, 1000);
+   }
+   
+   fetchData("https://example.com", 
+       (data) => console.log(data), 
+       (error) => console.error(error)
+   );
+   ```
+
+### Promises:
+
+7. **What is a Promise in JavaScript?**
+   - A Promise is a built-in object that represents the eventual completion or failure of an asynchronous operation. It provides a cleaner and more structured way to work with asynchronous code compared to callbacks.
+
+8. **How do you create a Promise? Provide an example.**
+   - Promises can be created using the `Promise` constructor and passing a resolver function with `resolve` and `reject` callbacks.
+   
+   ```javascript
+   const fetchData = (url) => {
+       return new Promise((resolve, reject) => {
+           setTimeout(() => {
+               const data = "Data from " + url;
+               resolve(data);
+           }, 1000);
+       });
+   };
+   ```
+
+9. **Explain the purpose of `then`, `catch`, and `finally` methods in Promises.**
+   - `then`: Handles successful fulfillment of a Promise with the resolved value.
+   - `catch`: Handles errors that occur during Promise execution.
+   - `finally`: Executes regardless of whether the Promise is fulfilled or rejected.
+
+10. **Describe how Promises help in avoiding callback hell.**
+    - Promises allow chaining of asynchronous operations using the `then` method, making code more readable and avoiding deep nesting of callbacks.
+
+11. **How do you handle multiple Promises concurrently using `Promise.all` and `Promise.race`?**
+    - `Promise.all`: Takes an array of Promises and returns a new Promise that resolves when all input Promises are resolved.
+    - `Promise.race`: Takes an array of Promises and returns a new Promise that resolves or rejects as soon as any of the input Promises resolves or rejects.
+
+    ```javascript
+    const promise1 = fetchData("https://example.com/data1");
+    const promise2 = fetchData("https://example.com/data2");
+    
+    Promise.all([promise1, promise2])
+        .then(([data1, data2]) => {
+            console.log(data1, data2);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ```
+
+### Async/await:
+
+1. **What are async functions, and how do they work?**
+   - Async functions are a way to write asynchronous code that looks more like synchronous code, making it easier to read and maintain. They are defined using the `async` keyword before the function declaration and can use the `await` keyword inside the function body to pause execution until a Promise is resolved.
+   
+   ```javascript
+   async function fetchData() {
+       const response = await fetch('https://api.example.com/data');
+       const data = await response.json();
+       return data;
+   }
+   ```
+
+2. **Explain the `await` keyword and its usage.**
+   - The `await` keyword is used inside an async function to pause execution until a Promise is resolved. It allows you to work with Promises in a sequential and readable manner, without the need for multiple `then` calls.
+   
+   ```javascript
+   async function fetchUserAndPosts(userId) {
+       const user = await fetchUser(userId);
+       const posts = await fetchPosts(userId);
+       return { user, posts };
+   }
+   ```
+
+3. **How does error handling work in async/await code?**
+   - Errors in async/await code can be handled using a `try` and `catch` block, similar to synchronous code. If a Promise is rejected, the error will be caught in the nearest enclosing `try` and `catch` block.
+   
+   ```javascript
+   async function fetchData() {
+       try {
+           const response = await fetch('https://api.example.com/data');
+           const data = await response.json();
+           return data;
+       } catch (error) {
+           console.error('Error fetching data:', error);
+       }
+   }
+   ```
+
+4. **Describe the benefits of using async/await over traditional Promise chains.**
+   - Async/await provides a more intuitive and readable way to handle asynchronous operations, resembling synchronous code.
+   - It avoids callback hell and makes error handling straightforward.
+   - It simplifies complex Promise chains by allowing linear code flow.
+   
+   ```javascript
+   async function fetchUserAndPosts(userId) {
+       try {
+           const user = await fetchUser(userId);
+           const posts = await fetchPosts(userId);
+           return { user, posts };
+       } catch (error) {
+           console.error('Error fetching user and posts:', error);
+       }
+   }
+   ```
+
+### Error Handling:
+
+5. **How can you handle errors in asynchronous code that uses callbacks?**
+   - Errors in asynchronous code that uses callbacks can be handled using the error parameter in the callback function.
+   
+   ```javascript
+   function fetchData(callback) {
+       fetch('https://api.example.com/data')
+           .then(response => response.json())
+           .then(data => callback(null, data))
+           .catch(error => callback(error, null));
+   }
+   ```
+
+6. **Explain how errors are propagated and caught in Promises.**
+   - Errors in Promises can be propagated to the `catch` method chained after the `then` method. If any Promise in a chain is rejected, the control jumps to the nearest `catch` method.
+   
+   ```javascript
+   fetch('https://api.example.com/data')
+       .then(response => response.json())
+       .then(data => console.log(data))
+       .catch(error => console.error('Error fetching data:', error));
+   ```
+
+7. **What is the difference between throwing an error in a try/catch block and rejecting a Promise?**
+   - Throwing an error in a try/catch block immediately stops the execution of the current function and jumps to the nearest catch block.
+   - Rejecting a Promise triggers the `catch` method of the Promise and allows error handling without stopping the entire function.
+   
+   ```javascript
+   try {
+       throw new Error('This is an error');
+   } catch (error) {
+       console.error('Caught an error:', error.message);
+   }
+   ```
+
+### Async Patterns:
+
+8. **Describe the waterfall pattern for handling asynchronous tasks.**
+   - The waterfall pattern is a series of asynchronous tasks executed sequentially, where the result of one task is passed to the next task. It can be achieved using async/await or Promise chaining.
+   
+   ```javascript
+   async function fetchAndProcessData() {
+       const data1 = await fetchData1();
+       const processedData1 = process(data1);
+       const data2 = await fetchData2(processedData1);
+       const finalResult = processData2(data2);
+       return finalResult;
+   }
+   ```
+
+9. **Explain the concept of parallel execution and how it can be achieved asynchronously.**
+   - Parallel execution involves running multiple asynchronous tasks simultaneously. This can be achieved using `Promise.all`, which takes an array of Promises and returns a new Promise that resolves when all input Promises are resolved.
+   
+   ```javascript
+   async function fetchMultipleData() {
+       const promise1 = fetchData1();
+       const promise2 = fetchData2();
+       const [data1, data2] = await Promise.all([promise1, promise2]);
+       return [data1, data2];
+   }
+   ```
 
 ---
 
