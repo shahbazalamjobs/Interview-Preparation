@@ -894,7 +894,7 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
 1. **What is the DOM (Document Object Model)?**
    - The DOM is a programming interface provided by browsers to represent and interact with HTML and XML documents as structured objects.
    - It allows scripts to dynamically access, manipulate, and update the content, structure, and style of web pages.
-    ```js
+    ```html
     <!DOCTYPE html>
     <html lang="en">
     <head>
