@@ -1218,7 +1218,7 @@ Certainly, here are simple explanations, along with code examples, for each of y
 ---
 
 
-** Function Basics:**
+**Function Basics:**
 
 **1 What is a function in JavaScript?**
 A function in JavaScript is a reusable block of code that performs a specific task or set of tasks. It allows you to encapsulate logic, making your code more organized, modular, and easier to maintain.
@@ -1252,7 +1252,7 @@ Function declarations are hoisted, meaning they can be called before their decla
 **4 What is the purpose of the return statement in a function?**
 The `return` statement is used to specify the value that a function should return when it is invoked. It allows the function to produce a result that can be used elsewhere in the code.
 
-** Function Parameters and Arguments:**
+**Function Parameters and Arguments:**
 
 **1 How do you pass parameters to a function?**
 Parameters are defined in the function declaration, and arguments are the actual values passed when invoking the function.
@@ -1288,7 +1288,7 @@ function sum(...numbers) {
 const total = sum(2, 4, 6, 8); // Passes multiple arguments as an array
 ```
 
-** Function Scope:**
+**Function Scope:**
 
 **1 Describe the difference between global scope and local scope.**
 Global scope refers to variables declared outside any function, making them accessible throughout the entire code. Local scope refers to variables declared within a function, making them only accessible within that function.
