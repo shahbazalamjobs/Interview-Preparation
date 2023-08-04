@@ -118,36 +118,44 @@ You can use the `<video>` element to embed videos:
 <video src="video.mp4" controls></video>
 ```
 
-These examples provide detailed explanations and simple code snippets for each question.
+**1. What is the `<meta>` tag used for in HTML?**
 
-11. **What is the `<meta>` tag used for in HTML?**
-   - The `<meta>` tag is used to provide metadata about the HTML document, such as character encoding, author, and viewport settings.
+The `<meta>` tag is used to provide metadata about the HTML document, such as character encoding, author, and viewport settings.
 
-12. **How do you create a form in HTML? Provide an example.**
-   - Forms are created using the `<form>` element. Example: 
-    ```html
-    <form action="/submit" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <input type="submit" value="Submit">
-    </form>
-    ```
+**2. How do you create a form in HTML? Provide an example.**
 
-13. **What is the purpose of the `<label>` element in forms?**
-  -  The `<label>` element associates a text label with a form element, making it more accessible and user-friendly.
+Forms are created using the `<form>` element. Here's an example of a simple form with a username input field and a submit button:
 
-14. **How can you add a background image to an HTML element?**
-  -  You can use the `background-image` property in CSS: 
-    ```css
-    .element {
-        background-image: url('image.jpg');
-    }
-    ```
+```html
+<form action="/submit" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <input type="submit" value="Submit">
+</form>
+```
 
-15. **Explain the concept of HTML entities. Give an example.**
-  -  HTML entities are special codes used to display reserved characters in HTML. For example, `&lt;` represents `<`, and `&amp;` represents `&`.
+**3. What is the purpose of the `<label>` element in forms?**
 
+The `<label>` element associates a text label with a form element, making it more accessible and user-friendly.
 
+**4. How can you add a background image to an HTML element?**
+
+You can use the `background-image` property in CSS:
+
+```css
+.element {
+    background-image: url('image.jpg');
+}
+```
+
+**5. Explain the concept of HTML entities. Give an example.**
+
+HTML entities are special codes used to display reserved characters in HTML. For example, `&lt;` represents `<`, and `&amp;` represents `&`.
+
+Example:
+```html
+<p>This is an &lt;example&gt; of HTML entities &amp; special characters.</p>
+```
 
 ---
 
