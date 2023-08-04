@@ -1,6 +1,6 @@
 # Interview question and answers
 
-
+# HTML & CSS
 
 HTML Questions:
 
@@ -317,5 +317,56 @@ CSS Questions:
  -  CSS specificity determines which rule is applied when multiple conflicting rules target the same element. It's calculated based on the number of ID selectors, class selectors, and element selectors in a rule. More specific selectors take precedence.
 
 
+---
 
+# Javascript
 
+**Basic JavaScript Concepts:**
+
+1. **What is JavaScript and where can you use it?**
+   JavaScript is a versatile, high-level scripting language used mainly for adding interactivity to web pages. It runs in web browsers, enabling dynamic behavior such as form validation, animations, and updating content without requiring a page reload. It can also be used on the server-side with platforms like Node.js.
+
+2. **What are the key differences between JavaScript and Java?**
+   Despite the similar names, JavaScript and Java are distinct languages. Java is a general-purpose, object-oriented language used for desktop, mobile, and web applications. JavaScript is a scripting language primarily used in web development for creating interactive client-side experiences within browsers.
+
+3. **What is the Document Object Model (DOM) in relation to JavaScript?**
+   The DOM is a representation of the structure of an HTML or XML document as a tree of objects. JavaScript can manipulate these objects to dynamically change the content, structure, and style of web pages. It provides a way to interact with and modify web documents through scripting.
+
+4. **Explain the difference between `null` and `undefined` in JavaScript.**
+   - `null` is a deliberate value assigned to a variable to indicate the absence of any value or object. It represents an intentional absence of value.
+   - `undefined` is a value automatically assigned by JavaScript to a variable that has been declared but hasn't been assigned a value yet. It indicates an uninitialized variable.
+
+5. **How can you check the data type of a variable in JavaScript?**
+   You can use the `typeof` operator followed by the variable name to determine its data type. Example: `typeof myVar;`. It returns a string indicating the type, like `'number'`, `'string'`, `'object'`, etc.
+
+6. **Describe the concept of hoisting in JavaScript.**
+   Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase. This allows variables to be used before they are declared. However, only the declarations are hoisted, not their assignments.
+   ```javascript
+   console.log(myVar); // undefined
+   var myVar = 10;
+   ```
+
+7. **What is a closure in JavaScript and why is it important?**
+   A closure is a function that captures and retains the scope and variables in which it was created, even if those variables are no longer in scope. It allows for data encapsulation, creating private variables, and implementing callbacks and event handlers.
+
+8. **How does JavaScript handle asynchronous programming?**
+   JavaScript uses callbacks, Promises, and the `async/await` syntax for asynchronous programming. Callbacks are functions passed as arguments and executed after a certain task completes. Promises provide a cleaner way to handle asynchronous operations, and `async/await` simplifies working with promises by making the code look synchronous while executing asynchronously.
+
+**Variables and Data Types:**
+
+9. **What are the different data types in JavaScript?**
+   JavaScript has several primitive data types: `number`, `string`, `boolean`, `null`, and `undefined`. It also has reference data types: `object`, `function`, and more.
+
+10. **What is the difference between `==` and `===` operators in JavaScript?**
+    - `==` (equality operator) compares values after type coercion. For example, `5 == '5'` would return `true`.
+    - `===` (strict equality operator) compares values and types without type coercion. `5 === '5'` would return `false`.
+
+11. **Explain the concept of scope in JavaScript variables.**
+    Scope refers to the context in which a variable is declared and where it is accessible. JavaScript has function scope (variables are accessible within the function they are defined) and block scope (ES6 introduced `let` and `const` with block-level scope).
+
+12. **How can you declare a constant variable in JavaScript?**
+    You can declare a constant variable using the `const` keyword. Once assigned, the value cannot be changed or reassigned.
+   ```javascript
+   const pi = 3.14159;
+   pi = 4; // Error: Assignment to constant variable.
+   ```
