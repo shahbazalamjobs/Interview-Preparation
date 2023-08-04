@@ -600,46 +600,46 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
 
 3. **Prototypal Inheritance:**
 
-- Prototypal inheritance is a way objects in JavaScript inherit properties and behaviors from other objects. Each object has a prototype, which can be another object. If a property or method is not found on an object, JavaScript looks for it in its prototype chain.
+ - Prototypal inheritance is a way objects in JavaScript inherit properties and behaviors from other objects. Each object has a prototype, which can be another object. If a property or method is not found on an object, JavaScript looks for it in its prototype chain.
 
 4. **Prototype Object in JavaScript:**
 
-- In JavaScript, every object has a hidden property called `__proto__` which points to its prototype object. This prototype object can itself have a prototype, creating a chain of objects.
+ - In JavaScript, every object has a hidden property called `__proto__` which points to its prototype object. This prototype object can itself have a prototype, creating a chain of objects.
 
-**Iterating Over an Object's Properties:**
+5. **Iterating Over an Object's Properties:**
 
-```javascript
-const person = {
-    name: "Alice",
-    age: 25,
-    occupation: "Designer"
-};
-
-for (const key in person) {
-    if (person.hasOwnProperty(key)) {
-        console.log(`${key}: ${person[key]}`);
-    }
-}
-```
-
-5. **Map, Filter, and Reduce Functions:**
-
- **`map()` Function:**
-   - The `map()` function transforms each element of an array and returns a new array with the transformed elements.
    ```javascript
-   const numbers = [1, 2, 3, 4, 5];
-   const doubled = numbers.map(num => num * 2);
+   const person = {
+       name: "Alice",
+       age: 25,
+       occupation: "Designer"
+   };
+   
+   for (const key in person) {
+       if (person.hasOwnProperty(key)) {
+           console.log(`${key}: ${person[key]}`);
+       }
+   }
    ```
 
- **`filter()` Function:**
-   - The `filter()` function creates a new array with elements that pass a certain condition.
-   ```javascript
-   const numbers = [1, 2, 3, 4, 5];
-   const evens = numbers.filter(num => num % 2 === 0);
-   ```
- **`reduce()` Function:**
-   - The `reduce()` function accumulates the elements of an array to a single value using a specified function.
-   ```javascript
-   const numbers = [1, 2, 3, 4, 5];
-   const sum = numbers.reduce((accumulator, num) => accumulator + num, 0);
-   ```
+6. **Map, Filter, and Reduce Functions:**
+  
+   **`map()` Function:**
+     - The `map()` function transforms each element of an array and returns a new array with the transformed elements.
+     ```javascript
+     const numbers = [1, 2, 3, 4, 5];
+     const doubled = numbers.map(num => num * 2);
+     ```
+  
+   **`filter()` Function:**
+     - The `filter()` function creates a new array with elements that pass a certain condition.
+     ```javascript
+     const numbers = [1, 2, 3, 4, 5];
+     const evens = numbers.filter(num => num % 2 === 0);
+     ```
+   **`reduce()` Function:**
+     - The `reduce()` function accumulates the elements of an array to a single value using a specified function.
+     ```javascript
+     const numbers = [1, 2, 3, 4, 5];
+     const sum = numbers.reduce((accumulator, num) => accumulator + num, 0);
+     ```
