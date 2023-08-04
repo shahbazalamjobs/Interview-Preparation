@@ -566,9 +566,8 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
     greet('John');    // Hello, John!
     ```
 
-Sure, here are detailed explanations and examples for the remaining points:
 
-1. **Difference between an Object and an Array:**
+21. **Difference between an Object and an Array:**
    - **Definition and Purpose:**
      - An **object** is a composite data type that stores data as key-value pairs. It is used to represent entities and their attributes or properties.
      - An **array** is a linear data structure that stores a collection of values in a specific order. It is used to manage lists of data or a sequence of elements.
@@ -586,7 +585,7 @@ Sure, here are detailed explanations and examples for the remaining points:
      const numbers = [1, 2, 3, 4, 5];
      ```
 
-2. **Creating and Accessing Properties of an Object in JavaScript:**
+22. **Creating and Accessing Properties of an Object in JavaScript:**
    - **Creating Properties:**
      ```javascript
      const person = {};
@@ -600,17 +599,17 @@ Sure, here are detailed explanations and examples for the remaining points:
      console.log(person["age"]);  // Output: 25
      ```
 
-3. **Prototypal Inheritance:**
+33. **Prototypal Inheritance:**
    - Prototypal inheritance is a mechanism in JavaScript where objects can inherit properties and methods from other objects.
    - Every object has an internal link to another object called its prototype.
    - If a property or method is not found on an object, JavaScript looks for it in its prototype chain.
 
-4. **Prototype Object in JavaScript:**
+24. **Prototype Object in JavaScript:**
    - Each object in JavaScript has a hidden `__proto__` property, which points to its prototype object.
    - The prototype object can also have its prototype, forming a prototype chain.
    - Properties and methods not found on an object are searched in its prototype chain.
 
-6. **Iterating Over an Object's Properties:**
+25. **Iterating Over an Object's Properties:**
    - You can iterate over an object's properties using a `for...in` loop.
    - Make sure to use `hasOwnProperty()` to check if the property is directly defined on the object.
    ```javascript
@@ -627,7 +626,7 @@ Sure, here are detailed explanations and examples for the remaining points:
    }
    ```
 
-7. **Map, Filter, and Reduce Functions:**
+26. **Map, Filter, and Reduce Functions:**
    - **`map()` Function:**
      - The `map()` function transforms each element of an array and returns a new array with the transformed elements.
      ```javascript
