@@ -599,7 +599,7 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
      console.log(person["age"]);  // Output: 25
      ```
 
-33. **Prototypal Inheritance:**
+23. **Prototypal Inheritance:**
    - Prototypal inheritance is a mechanism in JavaScript where objects can inherit properties and methods from other objects.
    - Every object has an internal link to another object called its prototype.
    - If a property or method is not found on an object, JavaScript looks for it in its prototype chain.
