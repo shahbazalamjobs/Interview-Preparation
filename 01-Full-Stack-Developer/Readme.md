@@ -74,7 +74,7 @@ Example:
 <img src="image.jpg" alt="A beautiful sunset">
 ```
 
-**7. What is the difference between the <ol> and <ul> elements?**
+**7. What is the difference between the `<ol>` and `<ul>` elements?**
 
 `<ol>` (ordered list) is used for numbered lists, while `<ul>` (unordered list) is used for bullet point lists.
 
@@ -101,7 +101,7 @@ Example:
 <p>This is visible content.</p>
 ```
 
-**9. Explain the difference between <strong> and <em> tags.**
+**9. Explain the difference between `<strong>` and `<em>` tags.**
 
 `<strong>` is used to indicate strong importance or emphasis, while `<em>` is used for emphasizing text.
 
