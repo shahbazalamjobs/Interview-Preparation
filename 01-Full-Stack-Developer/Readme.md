@@ -602,10 +602,11 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
  - Prototypal inheritance is a way objects in JavaScript inherit properties and behaviors from other objects. Each object has a prototype, which can be another object. If a property or method is not found on an object, JavaScript looks for it in its prototype chain.
 
 
+
 4. **Prototype Object in JavaScript:**
-   - In JavaScript, every object has a hidden property called `__proto__` which points to its prototype object. This prototype object can itself have a prototype, creating a chain of objects.
+- In JavaScript, every object has a hidden property called `__proto__` which points to its prototype object. This prototype object can itself have a prototype, creating a chain of objects.
      
-5. **Iterating Over an Object's Properties:**
+6. **Iterating Over an Object's Properties:**
 
    ```javascript
    const person = {
@@ -620,7 +621,7 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
        }
    }
    ```
-6. **Map, Filter, and Reduce Functions:**
+7. **Map, Filter, and Reduce Functions:**
   
    **`map()` Function:**
      - The `map()` function transforms each element of an array and returns a new array with the transformed elements.
@@ -642,7 +643,6 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
      const sum = numbers.reduce((accumulator, num) => accumulator + num, 0);
      ```
 
-7. d
 8. d
 9. d
 10. d
@@ -655,7 +655,8 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
 17. d
 18. d
 19. d
-20.  
+20. d
+21.  
 
  
 
