@@ -1081,8 +1081,6 @@ Certainly, here are simple explanations, along with code examples, for each of y
     element.style.fontSize = "16px";
     ```
 
-Certainly, here are simple explanations, along with code examples, for each of your questions:
-
 1. **Purpose of the appendChild and removeChild methods:**
    - `appendChild`: Used to add a child element to the end of a parent element's list of children.
    - `removeChild`: Used to remove a specific child element from its parent.
@@ -1218,7 +1216,7 @@ Certainly, here are simple explanations, along with code examples, for each of y
 ---
 
 
-**Function Basics:**
+### Function Basics:
 
 **1 What is a function in JavaScript?**
 A function in JavaScript is a reusable block of code that performs a specific task or set of tasks. It allows you to encapsulate logic, making your code more organized, modular, and easier to maintain.
@@ -1288,7 +1286,7 @@ function sum(...numbers) {
 const total = sum(2, 4, 6, 8); // Passes multiple arguments as an array
 ```
 
-**Function Scope:**
+### Function Scope
 
 **1 Describe the difference between global scope and local scope.**
 Global scope refers to variables declared outside any function, making them accessible throughout the entire code. Local scope refers to variables declared within a function, making them only accessible within that function.
