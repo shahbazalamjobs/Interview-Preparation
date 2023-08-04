@@ -567,8 +567,7 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
     ```
 
 1. **Difference between an Object and an Array:**
-
- **Definition and Purpose:**
+  **Definition and Purpose:**
    - An **object** is a data structure that stores data as key-value pairs. It is used to represent real-world entities and their attributes.
    - An **array** is a linear data structure that stores a collection of elements in a specific order. It is used to store and manipulate lists of data.
 
@@ -584,7 +583,6 @@ Certainly, here are detailed pointwise answers with examples and code snippets:
    // Array
    const numbers = [1, 2, 3, 4, 5];
    ```
-
 2. **Creating and Accessing Properties of an Object in JavaScript:**
 
  **Creating Properties:**
