@@ -125,9 +125,7 @@
 
 16. **Describe the map, filter, and reduce functions and provide use cases.**
     - `map`: Transforms each element of an array and returns a new array with transformed values.
-    - `filter`: Creates
-
- a new array containing elements that pass a specified condition.
+    - `filter`: Creates a new array containing elements that pass a specified condition.
     - `reduce`: Accumulates elements of an array into a single value through a provided function.
 
     ```javascript
