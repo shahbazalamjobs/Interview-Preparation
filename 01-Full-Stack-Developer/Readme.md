@@ -4,35 +4,121 @@
 
 HTML Questions:
 
-1. **What is HTML and what does it stand for?**
- - HTML stands for HyperText Markup Language. It is the standard markup language used to create and structure content on the web.
+**1. What is HTML and what does it stand for?**
 
-2. **What is the purpose of the `<!DOCTYPE>` declaration in HTML?**
-  - The `<!DOCTYPE>` declaration specifies the document type and version of HTML being used in a web page. It helps browsers render the content correctly.
+HTML stands for HyperText Markup Language. It is the standard markup language used to create and structure content on the web.
 
-3. **What are semantic elements in HTML? Give some examples.**
-  - Semantic elements are HTML tags that provide meaning to the structure of web content. Examples include `<header>`, `<nav>`, `<article>`, `<section>`, `<footer>`, etc.
+**2. What is the purpose of the <!DOCTYPE> declaration in HTML?**
 
-4. **Explain the difference between `<div>` and `<span>` elements.**
-  - `<div>` is a block-level element used for grouping and layout, while `<span>` is an inline element used for styling specific parts of content.
+The <!DOCTYPE> declaration specifies the document type and version of HTML being used in a web page. It helps browsers render the content correctly.
 
-5. **How do you create a hyperlink in HTML?**
-  - You create a hyperlink using the `<a>` (anchor) element with the `href` attribute: `<a href="https://www.example.com">Visit Example</a>`.
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+    <!-- Content goes here -->
+</body>
+</html>
+```
 
-6. **What is the purpose of the alt attribute in the `<img>` tag?**
-  - The `alt` attribute in the `<img>` tag provides alternative text for an image, which is displayed if the image cannot be loaded or for accessibility.
+**3. What are semantic elements in HTML? Give some examples.**
 
-7. **What is the difference between the `<ol>` and `<ul>` elements?**
-  - `<ol>` (ordered list) is used for numbered lists, while `<ul>` (unordered list) is used for bullet point lists.
+Semantic elements are HTML tags that provide meaning to the structure of web content. Examples include `<header>`, `<nav>`, `<article>`, `<section>`, `<footer>`, etc.
 
-8. **How can you create a comment in HTML?**
-  - HTML comments are created using `<!-- Your comment here -->`.
+Example:
+```html
+<header>
+    <h1>Welcome to My Website</h1>
+</header>
 
-9. **Explain the difference between `<strong>` and `<em>` tags.**
-  - `<strong>` is used to indicate strong importance or emphasis, while `<em>` is used for emphasizing text.
+<article>
+    <h2>Article Title</h2>
+    <p>This is an informative article.</p>
+</article>
 
-10. **How do you embed a video in an HTML page?**
-   - You can use the `<video>` element to embed videos: `<video src="video.mp4" controls></video>`.
+<footer>
+    <p>&copy; 2023 My Website</p>
+</footer>
+```
+
+**4. Explain the difference between <div> and <span> elements.**
+
+`<div>` is a block-level element used for grouping and layout, while `<span>` is an inline element used for styling specific parts of content.
+
+Example:
+```html
+<div>
+    <p>This is a block of content.</p>
+</div>
+
+<p>This is <span>highlighted</span> text.</p>
+```
+
+**5. How do you create a hyperlink in HTML?**
+
+You create a hyperlink using the `<a>` (anchor) element with the `href` attribute:
+```html
+<a href="https://www.example.com">Visit Example</a>
+```
+
+**6. What is the purpose of the alt attribute in the <img> tag?**
+
+The `alt` attribute in the `<img>` tag provides alternative text for an image, which is displayed if the image cannot be loaded or for accessibility.
+
+Example:
+```html
+<img src="image.jpg" alt="A beautiful sunset">
+```
+
+**7. What is the difference between the <ol> and <ul> elements?**
+
+`<ol>` (ordered list) is used for numbered lists, while `<ul>` (unordered list) is used for bullet point lists.
+
+Example:
+```html
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+
+<ul>
+    <li>Apple</li>
+    <li>Banana</li>
+</ul>
+```
+
+**8. How can you create a comment in HTML?**
+
+HTML comments are created using `<!-- Your comment here -->`.
+
+Example:
+```html
+<!-- This is a comment in HTML -->
+<p>This is visible content.</p>
+```
+
+**9. Explain the difference between <strong> and <em> tags.**
+
+`<strong>` is used to indicate strong importance or emphasis, while `<em>` is used for emphasizing text.
+
+Example:
+```html
+<p>This is <strong>important</strong> information.</p>
+<p>This is <em>emphasized</em> text.</p>
+```
+
+**10. How do you embed a video in an HTML page?**
+
+You can use the `<video>` element to embed videos:
+```html
+<video src="video.mp4" controls></video>
+```
+
+These examples provide detailed explanations and simple code snippets for each question.
 
 11. **What is the `<meta>` tag used for in HTML?**
    - The `<meta>` tag is used to provide metadata about the HTML document, such as character encoding, author, and viewport settings.
