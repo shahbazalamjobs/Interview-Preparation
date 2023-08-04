@@ -259,26 +259,56 @@ A pseudo-class is used to define a special state of an element. Examples:
 - `:nth-child(n)`: Styles applied to specific instances of an element.
 - `:first-child`: Styles applied to the first child of its parent.
 
-11. **How can you apply CSS styles to only the first child of an element?**
-  -  Using the `:first-child` pseudo-class. Example: `ul li:first-child { font-weight: bold; }`
+Certainly! Here are the detailed yet simple answers with code examples for the questions you provided:
 
-12. **Describe the difference between `margin` and `padding`.**
-    - `margin`: Space outside an element, creating space between elements.
-    - `padding`: Space inside an element's content area, between the content and the border.
+**11. How can you apply CSS styles to only the first child of an element?**
 
-13. **What is the purpose of the `z-index` property in CSS?**
-  -  The `z-index` property controls the stacking order of elements, determining which elements are displayed in front of or behind others.
+Using the `:first-child` pseudo-class.
 
-14. **How do you create a responsive design using CSS? Explain the use of media queries.**
-  -  Media queries are used to apply different styles based on the screen size or device characteristics. Example:
-    ```css
-    @media (max-width: 768px) {
-        /* Styles for screens up to 768px wide */
+Example:
+```css
+ul li:first-child {
+    font-weight: bold;
+}
+```
+
+**12. Describe the difference between margin and padding.**
+
+- `margin`: Space outside an element, creating space between elements.
+- `padding`: Space inside an element's content area, between the content and the border.
+
+**13. What is the purpose of the z-index property in CSS?**
+
+The `z-index` property controls the stacking order of elements, determining which elements are displayed in front of or behind others.
+
+**14. How do you create a responsive design using CSS? Explain the use of media queries.**
+
+Media queries are used to apply different styles based on the screen size or device characteristics.
+
+Example:
+```css
+@media (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    body {
+        font-size: 14px;
     }
-    ```
+}
+```
 
-15. **What is the `box-sizing` property in CSS used for?**
-  -  The `box-sizing` property controls how the total width and height of an element is calculated. It can be set to `content-box` (default) or `border-box`.
+**15. What is the box-sizing property in CSS used for?**
+
+The `box-sizing` property controls how the total width and height of an element is calculated. It can be set to `content-box` (default) or `border-box`.
+
+Example:
+```css
+/* Include padding and border in the element's total width and height */
+.box {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid black;
+}
+```
 
 ---
 
